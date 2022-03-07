@@ -1,5 +1,17 @@
 #include "string_.h"
 
+void assertString(const char *expected, char *got,
+                  char const *fileName, char const *funcName,
+                  int line) {
+    if (strcmp_(expected, got)) {
+        fprintf(stderr, " File %s\n", fileName);
+        fprintf(stderr, "%s - failed on line %d\n", funcName, line);
+        fprintf(stderr, " Expected : \"%s\"\n", expected);
+        fprintf(stderr, " Got : \"%s\"\n\n", got);
+    } else
+        fprintf(stderr, "%s - OK\n", funcName);
+}
+
 size_t strlen_(char *begin) {
     char *end = begin;
     while (*end != '\0')
@@ -48,8 +60,8 @@ char *findSpaceReverse(char *rBegin, const char *rend) {
     return rBegin;
 }
 
-int strcmp(const char *lhs, const char *rhs) {
-    while (*lhs == *rhs && *lhs != '\0' && *rhs != '\0') {
+int strcmp_(const char *lhs, const char *rhs) {
+    while (*lhs && *lhs == *rhs) {
         lhs++;
         rhs++;
     }
@@ -70,7 +82,7 @@ int isNonSpace(int symbol) {
 
 char *copyIf(char *beginSource, const char *endSource,
              char *beginDestination, int (*f)(int)) {
-    while (beginSource < endSource) {
+    while (beginSource != endSource) {
         if (f(*beginSource)) {
             *beginDestination = *beginSource;
             beginDestination++;
@@ -79,7 +91,7 @@ char *copyIf(char *beginSource, const char *endSource,
         beginSource++;
     }
 
-    return beginDestination + 1;
+    return beginDestination;
 }
 
 char *copyIfReverse(char *rbeginSource, const char *rendSource,
@@ -94,4 +106,11 @@ char *copyIfReverse(char *rbeginSource, const char *rendSource,
     }
 
     return beginDestination;
+}
+
+char *getEndOfString (char *s) {
+    while (*s != '\0')
+        s++;
+
+    return s;
 }
