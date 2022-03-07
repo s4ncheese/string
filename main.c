@@ -1,6 +1,7 @@
 #include <assert.h>
 #include "string/string_.h"
-#include "string/tasks/delete_spaces/delete_spaces.h"
+#include "string/tasks/task1_delete_spaces/delete_spaces.h"
+#include "string/tasks/task2_remove_extra_spaces/remove_extra_spaces.h"
 
 void test_findNonSpace_noSymbols() {
     char string[] = "";
@@ -194,6 +195,7 @@ void test_copyIfReverse() {
 
 void tests() {
     test_findNonSpaceReverse();
+    test_removeExtraSpaces();
     test_findSpaceReverse();
     test_removeNonLetters();
     test_copyIfReverse();
