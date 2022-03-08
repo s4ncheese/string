@@ -12,6 +12,22 @@ void assertString(const char *expected, char *got,
         fprintf(stderr, "%s - OK\n", funcName);
 }
 
+int getWord(char *beginSearch, WordDescriptor *word) {
+    word->begin = findNonSpace(beginSearch);
+
+    if (*word->begin == '\0') return 0;
+    word->end = findSpace(word->begin);
+
+    return 1;
+}
+
+bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word) {
+    word->begin = findNonSpaceReverse(rbegin, rend);
+    if (word->begin == rend) return false;
+    word->end = findSpaceReverse(word->begin, rend);
+    return true;
+}
+
 size_t strlen_(char *begin) {
     char *end = begin;
     while (*end != '\0')
@@ -108,7 +124,7 @@ char *copyIfReverse(char *rbeginSource, const char *rendSource,
     return beginDestination;
 }
 
-char *getEndOfString (char *s) {
+char *getEndOfString(char *s) {
     while (*s != '\0')
         s++;
 
