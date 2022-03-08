@@ -3,6 +3,8 @@
 #include "string/tasks/task1_delete_spaces/delete_spaces.h"
 #include "string/tasks/task2_remove_extra_spaces/remove_extra_spaces.h"
 #include "string/tasks/task3_reverse_digit_to_start/reverse_digit_to_start.h"
+#include "string/tasks/task4_replace_numbers_with_spaces/\
+replace_numbers_with_spaces.h"
 
 void test_findNonSpace_noSymbols() {
     char string[] = "";
@@ -195,6 +197,7 @@ void test_copyIfReverse() {
 }
 
 void tests() {
+    test_replaceNumbersWithSpaces();
     test_digitToStartInString();
     test_findNonSpaceReverse();
     test_removeExtraSpaces();
