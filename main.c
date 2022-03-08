@@ -6,6 +6,7 @@
 #include "string/tasks/task4_replace_numbers_with_spaces/\
 replace_numbers_with_spaces.h"
 #include "string/tasks/task6_is_ordered_words/is_ordered_words.h"
+#include "string/tasks/task7_bag_of_words/bag_of_words.h"
 
 void test_findNonSpace_noSymbols() {
     char string[] = "";
@@ -202,6 +203,7 @@ void tests() {
     test_digitToStartInString();
     test_findNonSpaceReverse();
     test_removeExtraSpaces();
+    test_printReverseWords();
     test_findSpaceReverse();
     test_removeNonLetters();
     test_isOrderedWords();

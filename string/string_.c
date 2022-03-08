@@ -92,6 +92,15 @@ char *copy(const char *beginSource, const char *endSource,
     return beginDestination + (endSource - beginSource);
 }
 
+char *reverseCopy(char *rbeginSource, const char *rendSource,
+                  char *beginDestination) {
+    while (rbeginSource != rendSource) {
+        *beginDestination++ = *rbeginSource;
+        rbeginSource--;
+    }
+    return beginDestination;
+}
+
 int isNonSpace(int symbol) {
     return !isspace(symbol) ? 1 : 0;
 }
@@ -129,4 +138,14 @@ char *getEndOfString(char *s) {
         s++;
 
     return s;
+}
+
+void getBagOfWords(BagOfWords *bag, char *string) {
+    bag->size = 0;
+    WordDescriptor word;
+    while (getWord(string, &word)) {
+        bag->words[bag->size] = word;
+        bag->size++;
+        string = word.end;
+    }
 }
