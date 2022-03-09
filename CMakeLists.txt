@@ -11,8 +11,10 @@ add_executable(str main.c
         string/tasks/task6_is_ordered_words/is_ordered_words.h
         string/tasks/task1_delete_spaces/delete_spaces.h
         string/tasks/task5_replace_words/replace_words.h
+        string/tasks/task9_merge_strings/merge_strings.h
         string/tasks/task7_bag_of_words/bag_of_words.h
         string/tasks/task7_bag_of_words/bag_of_words.c
+        string/tasks/task9_merge_strings/merge_strings.c
         string/tasks/task5_replace_words/replace_words.c
         string/tasks/task1_delete_spaces/delete_spaces.c
         string/tasks/task6_is_ordered_words/is_ordered_words.c
