@@ -7,6 +7,7 @@
 replace_numbers_with_spaces.h"
 #include "string/tasks/task6_is_ordered_words/is_ordered_words.h"
 #include "string/tasks/task7_bag_of_words/bag_of_words.h"
+#include "string/tasks/task8_amount_palindromes/amount_palindromes.h"
 
 void test_findNonSpace_noSymbols() {
     char string[] = "";
@@ -199,6 +200,7 @@ void test_copyIfReverse() {
 }
 
 void tests() {
+    test_amountOfPalindromesInString();
     test_replaceNumbersWithSpaces();
     test_digitToStartInString();
     test_findNonSpaceReverse();
