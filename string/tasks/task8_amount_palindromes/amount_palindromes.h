@@ -3,6 +3,8 @@
 
 #include "../../string_.h"
 
+bool isPoly(WordDescriptor word);
+
 int amountOfPalindromesInString(char *string);
 
 void test_amountOfPalindromesInString_emptyString();
