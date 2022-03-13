@@ -9,6 +9,7 @@ add_executable(str main.c
         string/tasks/task2_remove_extra_spaces/remove_extra_spaces.h
         string/tasks/task8_amount_palindromes/amount_palindromes.h
         string/tasks/task6_is_ordered_words/is_ordered_words.h
+        string/tasks/task10_reverse_string/reverse_string.h
         string/tasks/task1_delete_spaces/delete_spaces.h
         string/tasks/task5_replace_words/replace_words.h
         string/tasks/task9_merge_strings/merge_strings.h
@@ -17,12 +18,13 @@ add_executable(str main.c
         string/tasks/task9_merge_strings/merge_strings.c
         string/tasks/task5_replace_words/replace_words.c
         string/tasks/task1_delete_spaces/delete_spaces.c
+        string/tasks/task10_reverse_string/reverse_string.c
         string/tasks/task6_is_ordered_words/is_ordered_words.c
         string/tasks/task8_amount_palindromes/amount_palindromes.c
         string/tasks/task2_remove_extra_spaces/remove_extra_spaces.c
         string/tasks/task3_reverse_digit_to_start/reverse_digit_to_start.c
         string/tasks/task4_replace_numbers_with_spaces/replace_numbers_with_spaces.c
-        )
+        string/tasks/task11_before_first_a/task11.h string/tasks/task11_before_first_a/task11.c)
 
 add_library(string string/string_.h string/string_.c)
 

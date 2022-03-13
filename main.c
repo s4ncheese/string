@@ -9,6 +9,8 @@ replace_numbers_with_spaces.h"
 #include "string/tasks/task7_bag_of_words/bag_of_words.h"
 #include "string/tasks/task8_amount_palindromes/amount_palindromes.h"
 #include "string/tasks/task9_merge_strings/merge_strings.h"
+#include "string/tasks/task10_reverse_string/reverse_string.h"
+#include "string/tasks/task11_before_first_a/task11.h"
 
 void test_findNonSpace_noSymbols() {
     char string[] = "";
@@ -201,24 +203,26 @@ void test_copyIfReverse() {
 }
 
 void tests() {
-    test_amountOfPalindromesInString();
-    test_replaceNumbersWithSpaces();
-    test_alternatelyMergeStrings();
-    test_digitToStartInString();
-    test_findNonSpaceReverse();
-    test_removeExtraSpaces();
-    test_printReverseWords();
-    test_findSpaceReverse();
-    test_removeNonLetters();
-    test_isOrderedWords();
-    test_copyIfReverse();
-    test_areWordsEqual();
-    test_findNonSpace();
-    test_findSpace();
-    test_strcmp();
-    test_copyIf();
-    test_copy();
-
+    test_printWordBeforeFirstWordWithA();
+//    test_amountOfPalindromesInString();
+//    test_replaceNumbersWithSpaces();
+//    test_alternatelyMergeStrings();
+//    test_digitToStartInString();
+//    test_findNonSpaceReverse();
+//    test_removeExtraSpaces();
+//    test_printReverseWords();
+//    test_findSpaceReverse();
+//    test_removeNonLetters();
+//    test_isOrderedWords();
+//    test_reverseString();
+//    test_copyIfReverse();
+//    test_areWordsEqual();
+//    test_findNonSpace();
+//    test_findSpace();
+//    test_printWord();
+//    test_strcmp();
+//    test_copyIf();
+//    test_copy();
 }
 
 int main() {

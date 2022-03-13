@@ -25,6 +25,7 @@ bool getWordReverse(char *rbegin, char *rend, WordDescriptor *word) {
     word->begin = findNonSpaceReverse(rbegin, rend);
     if (word->begin == rend) return false;
     word->end = findSpaceReverse(word->begin, rend);
+
     return true;
 }
 
@@ -94,10 +95,12 @@ char *copy(const char *beginSource, const char *endSource,
 
 char *reverseCopy(char *rbeginSource, const char *rendSource,
                   char *beginDestination) {
-    while (rbeginSource != rendSource) {
-        *beginDestination++ = *rbeginSource;
+    while (rbeginSource > rendSource) {
+        *beginDestination = *rbeginSource;
+        beginDestination++;
         rbeginSource--;
     }
+
     return beginDestination;
 }
 
